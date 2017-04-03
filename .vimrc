@@ -19,6 +19,10 @@ set shiftwidth=2
 set shiftround    " Spaces are inserted whenever tab key is pressed. To insert tab characters use Ctrl-V<Tab>
 set expandtab
 
+" Showing line numbers and length
+set number " show line numbers
+
+
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
@@ -34,7 +38,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
-
 
 " Set a color scheme
 syntax enable
