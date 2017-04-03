@@ -13,6 +13,11 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 
+" Softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+set shiftround    " Spaces are inserted whenever tab key is pressed. To insert tab characters use Ctrl-V<Tab>
+set expandtab
 
 
 " Set a color scheme
