@@ -19,6 +19,22 @@ set shiftwidth=2
 set shiftround    " Spaces are inserted whenever tab key is pressed. To insert tab characters use Ctrl-V<Tab>
 set expandtab
 
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=longest,list,full
+set wildmenu
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
+
 
 " Set a color scheme
 syntax enable
