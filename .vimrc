@@ -13,6 +13,10 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 
+" Set automatical indentation
+set autoindent
+
+
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
